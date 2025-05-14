@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+This is a public github repo. When writing context markdown in CONTEXTS/, be sure to leave out any sensitive information.
