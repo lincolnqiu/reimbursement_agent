@@ -1,0 +1,66 @@
+# .gitignore
+# ============================
+# 该文件用于列举在版本控制中需要忽略的文件与目录。
+# 对应本发票报销工具（Python 项目），通常会生成以下内容：
+# 1. Python 运行时产生的缓存文件，如 __pycache__/ 与 *.py[co]。
+# 2. 虚拟环境目录 (venv/ 或 .venv/)。
+# 3. 构建/打包产物 (build/ dist/ 等)。
+# 4. 日志、调试及环境变量文件 (.env 等)。
+# 5. 用户交互目录，如 input/、output/、duplicates/，这些目录在运行时产生或存放临时数据，不需要纳入版本库。
+# 6. IDE 及操作系统临时文件 (.DS_Store 等)。
+#
+# 更新条件：
+# - 当项目新增需要排除的目录或文件类型时，应更新本文件。
+# - 当工具链变化（如加入 Node/前端依赖）产生新的临时文件/目录时，也需同步更新。
+#
+# 😀 祝编码愉快！
+
+# -------- Python 缓存 -------- #
+__pycache__/
+*.py[cod]
+*$py.class
+
+# -------- 虚拟环境 -------- #
+venv/
+.venv/
+ENV/
+
+# -------- 构建 & 打包 -------- #
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+
+# -------- 日志 & 环境文件 -------- #
+*.log
+*.sqlite3
+.env
+
+# -------- 用户交互目录 -------- #
+input/
+input copy/
+output/
+output copy/
+duplicates/
+trip_sheets/
+
+#   若想保留 output/ 目录结构，可改为：
+#   /output/*
+#   !/output/.gitkeep
+
+# -------- IDE / OS 临时文件 -------- #
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
+
+# -------- Excel & JSON 报表 -------- #
+output/invoice_report.xlsx
+output/invoice_data.json
+
+# -------- PDF 缩略图 / 其它临时 -------- #
+*.pdf.png
+
+# (可根据实际情况继续扩展) 
